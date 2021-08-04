@@ -8,9 +8,17 @@ namespace Webgentle.BookStore.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index() 
+        public ViewResult Index() 
         {
-            return "WebGentle";
+             return View();
+            //return View("../../Tempview/arview");
+            //return View("~/Tempview/arview.cshtml");  // to find view from different location
         }
+
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
+
     }
 }

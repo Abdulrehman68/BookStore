@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Site.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <img src="~/images/WordPress.png" class="logo" alt="logo"/>
+    <img src="~/MyStaticFiles/logo1.png" class="logo" alt="logo1"/>
+    <input type="button" value="Save" class="btn btn-dark"/>
+    <h1 class="h1">Lecture 18</h1>
+
+    @{
+        int a = 10;
+        int bb = 0;
+    }
+
+    @if (a == 5)
+    {
+        <h1>hello if block</h1>
+    }
+    else if (a == 10)
+    {
+        <h1>hello else if block</h1>
+    }
+    else
+    {
+        <h1>hello else block</h1>
+    }
+    <h1>ternary operator</h1>
+    <h2>Ternary - @(a == 10 ? bb = 10 : bb = 5)  </h2>
+    <h2>Value of bb is = @bb</h2>
+
+    @switch (a)
+    {
+        case 1:<h1>I Am 1</h1>
+            break;
+        case 2: <h1>I Am 2</h1>
+            break;
+        case 3: <h1>I Am 3</h1>
+            break;
+        case 10: <h1>I Am 10</h1>
+            break;
+        default:<h1>I Am default</h1>
+            break;
+    }
+    <h1>lECTURE 19</h1>
+    @for (int i = 0; i < 10; i++)
+    {
+        <h2>Value is @(i+1)</h2>
+    }
+    @{
+        var list = new List<int>() { 1, 2, 3, 4, 5 };
+    }
+
+    @foreach (var item in list)
+    {
+        <h2>@item</h2>
+    }
+
+    <h1>lECTURE 17</h1>
+    <h1>Hello Ar</h1>
+    <h1>@DateTime.Now.ToString("dd-mm-yy")</h1>
+    <h1>Sum = @(3 + 5)</h1>
+    <h1>Multiline -> </h1>
+    @{
+        int aa = 5;
+        int b = 15;
+        int c = aa + b;
+    }
+    <h1>@c</h1>
+    <h1>my email  - manirock623@gmail.com</h1>
+    <h1>rate is @@20</h1>
+</body>
+<script src="~/lib/jquery/jquery.js"></script>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        alert("Page Loaded");
+    });
+</script>
